@@ -13,7 +13,7 @@ h1, h2, .h1, .h2 {
   background-attachment: fixed;
 }
 
-.jumbotron .container {
+.j1 .container {
   top: 15vh;
   position: relative;
 }
@@ -21,13 +21,39 @@ h1, h2, .h1, .h2 {
 .j1 {
   color: white;
   background-color: #3C8BA1;
-  transition: box-shadow 5s ease-in-out;
+  transition: box-shadow 7s ease-in-out;
   box-shadow: inset -12vh -10vh 30vh rgba(102, 60, 102,0.7), inset 0vh 0vh 30vh lightgreen, inset 20vh 0vh 30vh turquoise;
+}
+
+.j2 {
+  background-image: url(img/prochain.jpg);
 }
 
 .j3 {
   color: white;
   background-color: #FC464C;
+  box-shadow: inset 0 -10vh 10vh maroon;
+}
+
+.j4 {
+  background-image: url(img/phonealchemist.jpg);
+}
+
+.bLabel {
+  background: rgba(30,30,30, 0.8);
+  color: white;
+  position: relative;
+  top: 40vh;
+  float: right;
+  padding: 1em;
+}
+
+.j2 .bLabel h2 {
+  color: #1794BF;
+}
+
+.j3 .bLabel h2 {
+  color: #FD3039;
 }
 
 .ask-btn {
@@ -84,6 +110,10 @@ h1, h2, .h1, .h2 {
     height: 5em;
   }
 
+  .bLabel {
+    width: 100%;
+  }
+
 }
 
 
@@ -92,6 +122,12 @@ h1, h2, .h1, .h2 {
 
   .j1.messed_up {
       box-shadow: inset 12vh 10vh 20vh rgba(102, 60, 102,0.7), inset 0vh 0vh 15vh turquoise, inset -20vh 0vh 19vh lightgreen;
+  }
+
+  .bLabel {
+    width: auto;
+    max-width: 30%;
+    text-align: right;
   }
 
 }

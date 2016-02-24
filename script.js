@@ -9,4 +9,4 @@ setInterval(function() {
 
 	$(".j1").toggleClass("messed_up");
 
-}, 5500);
+}, 10000);
