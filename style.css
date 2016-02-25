@@ -32,7 +32,7 @@ h1, h2, .h1, .h2 {
   transition: box-shadow 7s ease-in-out;
   box-shadow: inset -12vh -10vh 30vh rgba(102, 60, 102,0.7), inset 0vh 0vh 30vh lightgreen, inset 20vh 0vh 30vh turquoise;
   max-width: none;
-  background-image: url(img/cloud.svg);
+  background-image: url(img/clouds.svg);
   background-size: auto;
   background-position-y: 0;
 }
