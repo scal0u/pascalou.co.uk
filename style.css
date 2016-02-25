@@ -41,10 +41,10 @@ h1, h2, .h1, .h2 {
   color: white;
   background-color: #FC464C;
   box-shadow: inset 0 -10vh 10vh maroon;
-}
-
-.j3 img {
-  position: absolute;
+  background-image: url(img/3c.png);
+  background-size: auto;
+  background-position: center;
+  background-repeat: no-repeat;
 }
 
 .j4 {
@@ -124,6 +124,10 @@ h1, h2, .h1, .h2 {
     height: 5em;
   }
 
+  .j3 {
+      background-size: 100% auto;
+  }
+
 
 }
 
@@ -170,11 +174,8 @@ h1, h2, .h1, .h2 {
   .bLabel {
     width: 100%;
     text-align: center;
+    top: 65vh;
   }
-
-  .j3 .bLabel {
-    top: 50vh;
-  } 
 
   .bLabel .lead {
     font-size: 1.3em;
