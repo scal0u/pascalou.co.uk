@@ -56,6 +56,10 @@ h1, h2, .h1, .h2 {
   color: #FD3039;
 }
 
+.j4 .bLabel h2 {
+  color: #F39E13;
+}
+
 .ask-btn {
   border: 1px solid white;
   margin-top: 0.5em;
