@@ -16,7 +16,6 @@ h1, h2, .h1, .h2 {
   text-align: center;
   background-size: cover;
   background-position: center;
-  background-attachment: fixed;
   overflow: hidden;
   position: relative;
 }
@@ -145,13 +144,20 @@ h1, h2, .h1, .h2 {
 }
 
 
-/* Medium & up */
+/* Medium */
 @media only screen and (min-device-width: 480px) and (max-device-width: 800px) {
 
   .bLabel {
     max-width: none;
   }
 
+}
+
+/* Large & up */
+@media only screen and (min-device-width: 960px) {
+  .jumbotron {
+    background-attachment: fixed;
+  }
 }
 
 /* Medium & down */
