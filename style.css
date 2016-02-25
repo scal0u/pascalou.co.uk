@@ -1,5 +1,9 @@
 /* Styles go here */
 
+body {
+    background-color: #262626;
+}
+
 h1, h2, .h1, .h2 {
   font-family: Montserrat, sans-serif;
 }
@@ -7,6 +11,8 @@ h1, h2, .h1, .h2 {
 .jumbotron {
   margin-bottom: 0;
   min-height: 80vh;
+  max-width: 1800px;
+  margin: auto;
   text-align: center;
   background-size: cover;
   background-position: center;
@@ -23,6 +29,7 @@ h1, h2, .h1, .h2 {
   background-color: #3C8BA1;
   transition: box-shadow 7s ease-in-out;
   box-shadow: inset -12vh -10vh 30vh rgba(102, 60, 102,0.7), inset 0vh 0vh 30vh lightgreen, inset 20vh 0vh 30vh turquoise;
+  max-width: none;
 }
 
 .j2 {
