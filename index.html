@@ -10,7 +10,6 @@
   <link rel="stylesheet" href="style.css" />
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <script src="js/angular.min.js"></script>
-  <script src="js/script.js"></script>
 </head>
 
 <body>
@@ -236,26 +235,11 @@
 
     </div>
 
-    <script>
-      var app = angular.module('myApp', []);
-      app.controller('myCtrl', function($scope) {
-
-        $scope.wanted_types = {
-          website: false,
-          app: false,
-          misc: false,
-        };
-
-        $scope.wanted_types_done = false;
-
-        $scope.askMe = function() {
-          askMe();
-        };
-      });
-    </script>
   </div>
-  
-  <script> $(".j1").toggleClass("messed_up"); conveyorLoop(); </script>
+
+  <script src="js/script.js"></script>
+
+
 </body>
 
 </html>

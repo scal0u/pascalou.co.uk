@@ -1,9 +1,25 @@
+// APP
+var app = angular.module('myApp', []);
+app.controller('myCtrl', function($scope) {
+	$scope.wanted_types = {
+	  website: false,
+	  app: false,
+	  misc: false,
+	};
+
+	$scope.wanted_types_done = false;
+
+	$scope.askMe = function() {
+	  askMe();
+	};
+});
+
+
+// ANIMATIONS
+
 setInterval(function() {
-
 	$("#logo").parent().toggleClass("blur").toggleClass("shifted");
-
 }, 2000);
-
 
 setInterval(function() {
 	$(".j1").toggleClass("messed_up");
@@ -26,3 +42,5 @@ function askMe() {
         scrollTop: $(".askMe").offset().top
     }, 1000);
 }
+
+$(".j1").toggleClass("messed_up"); conveyorLoop();
