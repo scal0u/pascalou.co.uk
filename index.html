@@ -126,7 +126,7 @@
   <div class="jumbotron j5 askMe">
     <div ng-app="myApp" ng-controller="myCtrl" class="container">
 
-      <form>
+      <form ng-submit="askMe">
 
         <div class="row question" ng-hide="wanted_types_done">
 
@@ -216,10 +216,10 @@
             </label>
           </div>
 
-          <a class="btn btn-lg cWhite ask-btn" ng-show="user.email || user.phone" ng-click="contacts_done = true; askMe()">
+          <button class="btn btn-lg cWhite ask-btn" ng-show="user.email || user.phone" ng-click="contacts_done = true; askMe()">
             <i class="fa fa-check"></i>
             Continue
-          </a>
+          </button>
 
         </div>
 

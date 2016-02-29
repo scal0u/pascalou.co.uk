@@ -11,6 +11,7 @@ app.controller('myCtrl', function($scope) {
 
 	$scope.askMe = function() {
 	  askMe();
+	  console.log(3);
 	};
 });
 
