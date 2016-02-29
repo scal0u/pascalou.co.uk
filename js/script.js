@@ -11,7 +11,6 @@ app.controller('myCtrl', function($scope) {
 
 	$scope.askMe = function() {
 	  askMe();
-	  console.log(3);
 	};
 });
 
@@ -41,6 +40,9 @@ function checkOutMyWork() {
 function askMe() {
 	$('html, body').animate({
         scrollTop: $(".askMe").offset().top
+    }, 1000);
+    setTimeout(function() {
+	    $(".thank-you .img-responsive").toggleClass("turned");
     }, 1000);
 }
 
