@@ -141,7 +141,11 @@ h1, h2, .h1, .h2 {
   transition: background-color 0.5s;
 }
 
-label.well:hover, label.well.enhanced {
+label.well:hover {
+  background-color: rgba(200, 230, 255, 0.15);
+}
+
+label.well.enhanced {
   background-color: rgba(200, 230, 255, 0.4);
 }
 
