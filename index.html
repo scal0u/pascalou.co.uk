@@ -197,7 +197,8 @@
         <div class="row question" ng-show="description_done && !contacts_done">
           <h2>
             <i class="fa fa-thumbs-up"></i>
-            Great!
+            <span ng-hide="description == ' I will explain later.'">Great!</span>
+            <span ng-show="description == ' I will explain later.'">No problem.</span>
           </h2>
           <p class="lead">How should I contact you?</p>
 
