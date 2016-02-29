@@ -25,4 +25,5 @@ function askMe() {
 	$('html, body').animate({
         scrollTop: $(".askMe").offset().top
     }, 1000);
+    window.parent.document.body.style.zoom = 1.0;
 }

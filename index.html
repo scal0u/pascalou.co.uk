@@ -217,7 +217,7 @@
             </label>
           </div>
 
-          <a class="btn btn-lg cWhite ask-btn" ng-show="user.email || user.phone" ng-click="contacts_done = true;">
+          <a class="btn btn-lg cWhite ask-btn" ng-show="user.email || user.phone" ng-click="contacts_done = true; askMe()">
             <i class="fa fa-check"></i>
             Continue
           </a>
@@ -248,6 +248,9 @@
 
         $scope.wanted_types_done = false;
 
+        $scope.askMe = function() {
+          askMe();
+        };
       });
     </script>
   </div>
