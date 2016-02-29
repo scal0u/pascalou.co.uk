@@ -89,6 +89,14 @@ h1, h2, .h1, .h2 {
   background-color: transparent;
 }
 
+.ask-btn:active {
+  box-shadow: none;
+}
+
+.tap-white, .ask-btn {
+    -webkit-tap-highlight-color: rgba(255,255,255,0.5);
+}
+
 .see-btn {
     display: inline-block;
 }
