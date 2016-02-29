@@ -155,11 +155,14 @@ label.well.enhanced {
 
 /* Mobile Media Queries */
 @media only screen and (max-device-width: 480px) {
-  
-  .jumbotron .bLabel {
-    /*position: relative;*/
 
-  }
+  .type_choice {
+    padding: 5px;
+  }  
+
+  .type_choice .well {
+    margin-bottom: 0;
+  }  
 
   #logo {
     height: 5em;
