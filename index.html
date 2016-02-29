@@ -127,58 +127,126 @@
   <div class="jumbotron j5 askMe">
     <div ng-app="myApp" ng-controller="myCtrl" class="container">
 
-      <h2>
-        <i class="fa fa-coffee"></i>
-        So what do you have <nobr>in mind?</nobr>
-      </h2>
-
-      <hr>
-
       <form>
-        
-        <div class="row">
+
+        <div class="row question" ng-hide="wanted_types_done">
+
+          <h2>
+            <i class="fa fa-coffee"></i>
+            So what do you have <nobr>in mind?</nobr>
+          </h2>
+          <p>You can pick several things</p>
+
+          <div class="col-sm-4">
+            <label class="well" ng-class="{enhanced: wanted_types.website}">
+              <i class="fa fa-globe fa-4x"></i>
+              <p class="lead">A website</p>
+              <input type="checkbox" ng-model="wanted_types.website" class="hidden">
+              <i class="fa fa-toggle-on fa-2x" ng-show="wanted_types.website"></i>
+              <i class="fa fa-toggle-off fa-2x" ng-hide="wanted_types.website"></i>
+            </label>
+          </div>
+          <div class="col-sm-4">
+            <label class="well" ng-class="{enhanced: wanted_types.app}">
+              <i class="fa fa-mobile fa-4x"></i>
+              <i class="fa fa-tablet fa-4x"></i>
+              <p class="lead">An app</p>
+              <input type="checkbox" ng-model="wanted_types.app" class="hidden">
+              <i class="fa fa-toggle-on fa-2x" ng-show="wanted_types.app"></i>
+              <i class="fa fa-toggle-off fa-2x" ng-hide="wanted_types.app"></i>
+            </label>
+          </div>
+          <div class="col-sm-4">
+            <label class="well" ng-class="{enhanced: wanted_types.misc}">
+              <i class="fa fa-rocket fa-4x"></i>
+              <p class="lead">Something else</p>
+              <input type="checkbox" ng-model="wanted_types.misc" class="hidden">
+              <i class="fa fa-toggle-on fa-2x" ng-show="wanted_types.misc"></i>
+              <i class="fa fa-toggle-off fa-2x" ng-hide="wanted_types.misc"></i>
+            </label>
+          </div>
+
+            <a class="btn btn-lg cWhite ask-btn" ng-show="wanted_types.website || wanted_types.app || wanted_types.misc" ng-click="wanted_types_done = true;">
+              <i class="fa fa-check"></i>
+              Continue
+            </a>
+        </div>
+
+        <div class="row question" ng-show="wanted_types_done && !description_done">
+          <h2>
+            <i class="fa fa-smile-o"></i>
+            Really! <nobr>Now I'm curious.</nobr>
+          </h2>
+          <p class="lead">Want to tell me more?</p>
+
+          <div class="col-sm-12">
+            <textarea name="misc" id="misc" class="form-control text-center" ng-model="description" placeholder="You may want to describe your project in a few words."></textarea>
+            <a class="btn cWhite ask-btn" ng-click="description = description + ' I will explain later.'; description_done = true;">
+              <i class="fa fa-clock-o"></i>
+              No, I'll tell you later
+            </a>
+            <!-- <br> -->
+            <a class="btn btn-lg cWhite ask-btn" ng-show="description" ng-click="description_done = true;">
+              <i class="fa fa-check"></i>
+              Continue
+            </a>
+          </div>
+          
+        </div>
+
+        <div class="row question" ng-show="description_done && !contacts_done">
+          <h2>
+            <i class="fa fa-thumbs-up"></i>
+            Great!
+          </h2>
+          <p class="lead">How should I contact you?</p>
+
           <div class="col-sm-6">
             <label class="well">
-              <p class="lead">I want <strong>a website</strong></p>
-              <input type="checkbox">
+              <p>
+                <i class="fa fa-envelope"></i> Email me</p>
+              <input type="email" class="form-control text-center" ng-model="user.email" placeholder="you@example.com">
             </label>
           </div>
           <div class="col-sm-6">
             <label class="well">
-              <p class="lead">I want <strong>an app</strong></p>
-              <input type="checkbox">
+              <p>
+                <i class="fa fa-phone"></i> Call me</p>
+              <input type="tel" class="form-control text-center" ng-model="user.phone" placeholder="Your number">
             </label>
           </div>
-          <div class="col-sm-6">
-            <label class="well">
-              <p class="lead">I want <strong>both!</strong></p>
-              <input type="checkbox">
-            </label>
-          </div>
-          <div class="col-sm-6">
-            <label class="well">
-              <p class="lead">Something else:</p>
-              <input type="text" class="form-control" />
-            </label>
-          </div>
+
+          <a class="btn btn-lg cWhite ask-btn" ng-show="user.email || user.phone" ng-click="contacts_done = true;">
+            <i class="fa fa-check"></i>
+            Continue
+          </a>
+
+        </div>
+
+        <div class="row" ng-show="contacts_done">
+          <h2>
+            <i class="fa fa-smile-o"></i>
+            Thank you!
+          </h2>
+          <p>I'll get in touch shortly to discuss <nobr>your project.</nobr></p>
         </div>
 
       </form>
-
-      <div class="hidden">
-        First Name: <input type="text" ng-model="firstName"><br>
-        Last Name: <input type="text" ng-model="lastName"><br>
-        <br>
-        Full Name: {{firstName + " " + lastName}}
-      </div>
 
     </div>
 
     <script>
       var app = angular.module('myApp', []);
       app.controller('myCtrl', function($scope) {
-          $scope.firstName = "John";
-          $scope.lastName = "Doe";
+
+        $scope.wanted_types = {
+          website: false,
+          app: false,
+          misc: false,
+        };
+
+        $scope.wanted_types_done = false;
+
       });
     </script>
   </div>

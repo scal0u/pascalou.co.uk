@@ -83,6 +83,8 @@ h1, h2, .h1, .h2 {
 .ask-btn {
   border: 1px solid white;
   margin-top: 0.5em;
+  margin-left: 0.5em;
+  margin-right: 0.5em;
   margin-bottom: 1em;
 }
 
@@ -118,14 +120,22 @@ h1, h2, .h1, .h2 {
   height: 9em;
 }
 
-label.well {
+.well {
   width: 100%;
   background-color: transparent;
   transition: background-color 0.5s;
 }
 
-label.well:hover {
-  background-color: rgba(200, 200, 255, 0.2);
+label.well:hover, label.well.enhanced {
+  background-color: rgba(200, 230, 255, 0.4);
+}
+
+.fa-toggle-off {
+  opacity: 0.5;
+}
+
+.question {
+  min-height: 90vh;
 }
 
 
