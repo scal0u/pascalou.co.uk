@@ -157,6 +157,10 @@ label.well.enhanced {
   background-color: rgba(200, 230, 255, 0.4);
 }
 
+label.well input {
+  font-weight: normal;
+}
+
 .fa-toggle-off {
   opacity: 0.5;
 }
