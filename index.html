@@ -98,7 +98,7 @@
             </label>
           </div>
 
-            <a class="btn btn-lg cWhite ask-btn" ng-show="wanted_types.website || wanted_types.app || wanted_types.misc" ng-click="wanted_types_done = true;">
+            <a class="btn btn-lg cWhite ask-btn" ng-show="wanted_types.website || wanted_types.app || wanted_types.misc" ng-click="wanted_types_done = true; askMe()">
               <i class="fa fa-check"></i>
               Continue
             </a>
@@ -156,7 +156,7 @@
 
         </div>
 
-        <div class="row thank-you" ng-show="contacts_done">
+        <div class="row thank-you question" ng-show="contacts_done">
           <h2>
             <i class="fa fa-paper-plane"></i>
             Thank you!

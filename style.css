@@ -114,7 +114,7 @@ h1, h2, .h1, .h2 {
 }
 
 .thank-you .img-responsive {
-  max-width: 60% !important;
+  max-width: 10em !important;
   transition: all 1s;
 }
 
@@ -148,11 +148,6 @@ label.well:hover, label.well.enhanced {
 .fa-toggle-off {
   opacity: 0.5;
 }
-
-.question {
-  min-height: 90vh;
-}
-
 
 /* Mobile Media Queries */
 @media only screen and (max-device-width: 480px) {
@@ -220,5 +215,10 @@ label.well:hover, label.well.enhanced {
   .bLabel .lead {
     font-size: 1.3em;
   }
+
+  .question {
+    min-height: 100vh;
+  }
+
 
 }
