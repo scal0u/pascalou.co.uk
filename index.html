@@ -9,7 +9,8 @@
   <link href='https://fonts.googleapis.com/css?family=Montserrat:400,700' rel='stylesheet' type='text/css'>
   <link rel="stylesheet" href="style.css" />
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <script src="script.js"></script>
+  <script src="js/angular.min.js"></script>
+  <script src="js/script.js"></script>
 </head>
 
 <body>
@@ -92,8 +93,8 @@
       <p class="lead">I create <strong>websites</strong> and <strong>apps</strong>
         <nobr>for you.</nobr>
       </p>
-      <a class="btn btn-lg ask-btn cWhite">
-        <i class="fa fa-comment"></i> Ask me anything
+      <a class="btn btn-lg ask-btn cWhite" onclick="askMe()">
+        <i class="fa fa-comment"></i> Let's talk about you 
       </a>
       <br/>
       <a class="btn cWhite see-btn" onclick="checkOutMyWork()">
@@ -121,6 +122,65 @@
       <h2>PhoneAlchemist</h2>
       <p class="lead">A website and an app for an innovative payment service</p>
     </div>
+  </div>
+    
+  <div class="jumbotron j5 askMe">
+    <div ng-app="myApp" ng-controller="myCtrl" class="container">
+
+      <h2>
+        <i class="fa fa-coffee"></i>
+        So what do you have <nobr>in mind?</nobr>
+      </h2>
+
+      <hr>
+
+      <form>
+        
+        <div class="row">
+          <div class="col-sm-6">
+            <label class="well">
+              <p class="lead">I want <strong>a website</strong></p>
+              <input type="checkbox">
+            </label>
+          </div>
+          <div class="col-sm-6">
+            <label class="well">
+              <p class="lead">I want <strong>an app</strong></p>
+              <input type="checkbox">
+            </label>
+          </div>
+          <div class="col-sm-6">
+            <label class="well">
+              <p class="lead">I want <strong>both!</strong></p>
+              <input type="checkbox">
+            </label>
+          </div>
+          <div class="col-sm-6">
+            <label class="well">
+              <p class="lead">Something else:</p>
+              <input type="text" class="form-control" />
+            </label>
+          </div>
+        </div>
+
+      </form>
+
+      <div class="hidden">
+        First Name: <input type="text" ng-model="firstName"><br>
+        Last Name: <input type="text" ng-model="lastName"><br>
+        <br>
+        Full Name: {{firstName + " " + lastName}}
+      </div>
+
+    </div>
+
+    <script>
+      var app = angular.module('myApp', []);
+      app.controller('myCtrl', function($scope) {
+          $scope.firstName = "John";
+          $scope.lastName = "Doe";
+      });
+    </script>
   </div>
   
   <script> $(".j1").toggleClass("messed_up"); conveyorLoop(); </script>

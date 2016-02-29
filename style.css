@@ -26,7 +26,7 @@ h1, h2, .h1, .h2 {
   position: relative;
 }
 
-.j1 {
+.j1, .j5 {
   color: white;
   background-color: #3C8BA1;
   transition: box-shadow 7s ease-in-out;
@@ -53,6 +53,10 @@ h1, h2, .h1, .h2 {
 
 .j4 {
   background-image: url(img/phonealchemist.jpg);
+}
+
+.j5 {
+  /*box-shadow: none;*/
 }
 
 .bLabel {
@@ -114,6 +118,15 @@ h1, h2, .h1, .h2 {
   height: 9em;
 }
 
+label.well {
+  width: 100%;
+  background-color: transparent;
+  transition: background-color 0.5s;
+}
+
+label.well:hover {
+  background-color: rgba(200, 200, 255, 0.2);
+}
 
 
 /* Mobile Media Queries */

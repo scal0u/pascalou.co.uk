@@ -20,3 +20,9 @@ function checkOutMyWork() {
         scrollTop: $(".j2").offset().top
     }, 1000);
 }
+
+function askMe() {
+	$('html, body').animate({
+        scrollTop: $(".askMe").offset().top
+    }, 1000);
+}
