@@ -1,6 +1,8 @@
 // APP
-var app = angular.module('myApp', []);
-app.controller('myCtrl', function($scope) {
+var app = angular.module('myApp', ["firebase"]);
+
+app.controller('myCtrl', function($scope, $firebaseArray) {
+
 	$scope.wanted_types = {
 	  website: false,
 	  app: false,
@@ -12,6 +14,22 @@ app.controller('myCtrl', function($scope) {
 	$scope.askMe = function() {
 	  askMe();
 	};
+
+	var ref = new Firebase("https://pascalou.firebaseio.com/messages");
+	// create a synchronized array
+	$scope.messages = $firebaseArray(ref);
+	// add new items to the array
+	// the message is automatically added to our Firebase database!
+	$scope.addMessage = function() {
+		var date = new Date().toString();
+		$scope.messages.$add({
+			wanted_types: $scope.wanted_types,
+			description: $scope.description,
+			user: $scope.user,
+			date: date,
+		});
+	};
+
 });
 
 

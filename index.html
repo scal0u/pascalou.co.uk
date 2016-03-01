@@ -10,6 +10,10 @@
   <link rel="stylesheet" href="style.css" />
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
   <script src="js/angular.min.js"></script>
+  <!-- Firebase -->
+  <script src="https://cdn.firebase.com/js/client/2.2.4/firebase.js"></script>
+  <!-- AngularFire -->
+  <script src="https://cdn.firebase.com/libs/angularfire/1.1.3/angularfire.min.js"></script>
 </head>
 
 <body>
@@ -59,7 +63,7 @@
   <div class="jumbotron j5 askMe">
     <div ng-app="myApp" ng-controller="myCtrl" class="container">
 
-      <form ng-submit="contacts_done = true; askMe();">
+      <form ng-submit="addMessage(); contacts_done = true; askMe();">
 
         <div class="row question" ng-hide="wanted_types_done">
 
