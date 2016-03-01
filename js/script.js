@@ -34,7 +34,6 @@ app.controller('myCtrl', function($scope, $firebaseArray) {
 
 
 // ANIMATIONS
-
 setInterval(function() {
 	$("#logo").parent().toggleClass("blur").toggleClass("shifted");
 }, 2000);
