@@ -89,6 +89,10 @@ h1, h2, .h1, .h2 {
   background-color: transparent;
 }
 
+#misc {
+  margin-bottom: 1em;
+}
+
 .ask-btn:active {
   box-shadow: none;
 }
@@ -217,6 +221,11 @@ label.well input {
   .jumbotron {
     background-attachment: fixed;
   }
+
+  #misc {
+    max-width: 60%;
+  }
+
 }
 
 /* Medium & down */
