@@ -32,27 +32,27 @@ h1, h2, .h1, .h2 {
   transition: box-shadow 7s ease-in-out;
   box-shadow: inset -12vh -10vh 30vh rgba(102, 60, 102,0.7), inset 0vh 0vh 30vh lightgreen, inset 20vh 0vh 30vh turquoise;
   max-width: none;
-  background-image: url(img/clouds.svg);
+  background-image: url(../img/clouds.svg);
   background-size: auto;
   background-position-y: 0;
 }
 
 .j2 {
-  background-image: url(img/prochain.jpg);
+  background-image: url(../img/prochain.jpg);
 }
 
 .j3 {
   color: white;
   background-color: #FC464C;
   box-shadow: inset 0 -15vh 10vh maroon;
-  background-image: url(img/3c.png);
+  background-image: url(../img/3c.png);
   background-size: auto;
   background-position: center;
   background-repeat: no-repeat;
 }
 
 .j4 {
-  background-image: url(img/phonealchemist.jpg);
+  background-image: url(../img/phonealchemist.jpg);
 }
 
 .j5 {
